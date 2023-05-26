@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Website</title>
+	<style>
+		body {
+			background-color: #000;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			margin: 0;
+			padding: 0;
+		}
+		
+		header {
+			color: #0c59cf;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		h1 {
+			font-size: 36px;
+			margin: 0;
+		}
+		
+		nav {
+			background-color: #0c59cf;
+			color: #fff;
+			padding: 10px;
+		}
+		
+		
+		
+		nav li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+		
+		nav a {
+			color: #fff;
+			text-decoration: none;
+		}
+		
+		section {
+			padding: 20px;
+			text-align: center;
+			position:relative;
+		}
+		
+		footer {
+			margin-top:20px;
+			clear: both ;
+			background-color: #fff;
+			color:black;
+			padding:20px;
+			text-align:center;
+		}
+		
+		.footer h3 {
+		    font-size: 20px;
+			margin: 10px 0;
+			color: #0c59cf;
+	         padding: 20px;
+				}
+		.icon-container
+				{
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+				}
+
+		.icon-container img
+				{
+				  width: 50px;
+				  height: 50px;
+				  margin: 0 10px;
+				}
+		#gif {
+			height: 10%;
+			width: 97%;
+			object-fit: cover;
+		}
+			
+		.caption-container {
+			position: absolute;
+			height : 0% ;
+			width: 100%;
+			bottom: 70%;
+		
+		}
+		
+		.caption {
+			display: inline-block;
+			width: 15%;
+			color:#0c59cf;
+			font-size: 18px;
+			text-align: center;
+			font-weight: bold;
+			font-family: Arial;
+		}
+		.caption a {
+		        text-decoration:none ;       
+		}	
+
+   #solid-line-1,
+    #solid-line-2,
+	#solid-line-3{
+		  width: 97%;
+		  height: 10%;
+		  margin: 70px 10px;
+		  border-bottom: 15px solid #0c59cf;
+		
+			}
+
+ .content-container {
+			  text-align: center;
+			  color: white;
+			  font-size: 24px;
+			  margin: 5px 20px;
+			
+			}
+			
+    .image-container {
+			display: inline-block;
+			width: 19%;
+			margin-right: 30px;
+			vertical-align: top;
+            box-shadow:0 0 15px #fff ;		
+		    transition:Tranform 0.3s ease-in-out;
+			
+		}
+
+		.image-container img {
+			width: 100%;
+			height: auto;
+			
+		}
+
+		.image-container h3 {
+			font-size: 20px;
+			margin: 10px 0;
+			color: #0c59cf;
+		}
+		
+         .image-container h2{
+		 color:#fff;
+		 font-size:15px;
+		 }
+		 
+		 
+		 
+		.image-container p {
+			font-size: 16px;
+			margin: 5px 0;
+			color: #ccc;
+		}	
+		
+		.image-container :hover {
+		  transform: scale(1.1);
+		}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width:auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+ 
+}
+.prev {
+	left: 0;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}	
+		
+	</style>
+</head>
+<body>
+	<header>
+		
+	</header>
+	
+	
+	<section>
+			<div class="slideshow-container">
+			  <!-- Full-width images with number and caption text -->
+			  <div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<img src="WEBSITE IMAGES\john-wick-poster-qa-hed-page-2019.jpg" style="width:100%">
+				<div class="text">
+				 <h2>John Wick</h2>
+				<h2>Legendary assassin John Wick (Keanu Reeves) retired from his violent career after marrying the love of his life. Her sudden death leaves John in deep mourning. When sadistic mobster Iosef Tarasov (Alfie Allen) and his thugs steal John's prized car and kill the puppy that was a last gift from his wife, John unleashes the remorseless killing machine within and seeks vengeance. Meanwhile, Iosef's father (Michael Nyqvist) -- John's former colleague -- puts a huge bounty on John's head.</h2></div>
+			  </div>
+
+			  <div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img src="WEBSITE IMAGES\john-wick-poster-qa-hed-page-2019.jpg" style="width:100%">
+				<div class="text">
+				<h2>Batman</h2>
+				<h3>On Halloween, Gotham City mayor Don Mitchell Jr. is murdered by a serial killer calling himself the Riddler. Billionaire Bruce Wayne, who has operated for two years as the vigilante Batman, investigates alongside the Gotham City Police Department (GCPD). </h2></div>
+			  </div>
+
+			  <div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img src="WEBSITE IMAGES\Godzilla-vs-Kong-Boat-Battle.jpg" style="width:100%">
+				<div class="text"><h2>Godzilla-vs-Kong</h2><h3>Kong and his protectors undertake a perilous journey to find his true home. Along for the ride is Jia, an orphaned girl who has a unique and powerful bond with the mighty beast. However, they soon find themselves in the path of an enraged Godzilla as he cuts a swath of destruction across the globe. The initial confrontation between the two titans -- instigated by unseen forces -- is only the beginning of the mystery that lies deep within the core of the planet.</h3></div>
+		   </div>
+
+			  <!-- Next and previous buttons -->
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+			<div class="caption-container">
+				<span class="caption"><a href="index.html (2).html">HOME</a></span>
+				<span class="caption"><a href="movies.html">Movies</a></span>
+				<span class="caption"><a href="games and apps.html">Games And Apps</a></span>
+				<span class="caption"><a href="branding.html">Branding</a></span>
+				<span class="caption"><a href="feedback3.html">Feedback</a></span>
+				<span class="caption"><a href="Press Release.html">Press Release</a></span>
+			</div>
+		
+		<div id="solid-line-1"></div>
+             <div class="content-container">
+              <header>
+		          <h1>WHAT'S HOT</h1>
+	         </header>
+               </div>
+			   
+			   <div class="image-container">
+			   <a href="https://example.com/movie1">
+				<img src="WEBSITE IMAGES\flash_keyart_0.jpg" alt="Image 1">
+				<h2>Movie</h2>
+				<h3>The flash </h3>
+				<p>In theaters June 16</p>
+				</a>
+			</div>
+
+			<div class="image-container">
+			   <a href="https://example.com/movie1">
+				<img src="WEBSITE IMAGES\barbie_keyart_0.jpg" alt="Image 2">
+				<h2>Movie</h2>
+				<h3>Barbie</h3>
+				<p>In theaters  July 21</p>
+				</a>
+			</div>
+
+			<div class="image-container">
+			  <a href="https://example.com/movie1">
+				<img src= "WEBSITE IMAGES\evil_dead_rise_keyart.jpg"alt="Image 3">
+				<h2>Movie</h2>
+				<h3>Evil Dead Rise </h3>
+				<p>In theaters April 21</p>
+				</a>
+			</div>
+
+			<div class="image-container">
+			   <a href="https://example.com/movie1">
+				<img src="WEBSITE IMAGES\bluebeetle_keyart_0.jpg" alt="Image 4">
+				<h2>Movie</h2><h3>Blue Beetle</h3>
+				<p>In theaters August 18</p>
+				</a>
+			</div>
+		
+       
+	   <div id="solid-line-2"></div>
+	   <div class="content-container">
+              <header>
+		          <h1>NEW RELEASES TO OWN</h1>
+	         </header>
+               </div>
+	   
+	           <div class="image-container">
+			   <a href="https://example.com/movie1">
+				<img src="WEBSITE IMAGES\download (9).jpg" alt="Image 2">
+				<h3>Surperpets</h3>
+				<p>In theaters  July 21</p>
+				</a>
+				</div>
+				
+				<div class="image-container">
+			   <a href="https://example.com/movie1">
+				<img src="WEBSITE IMAGES\download (8).jpg" alt="Image 2">
+				<h3>Kong Vs Godzilla</h3>
+				<p>In theaters  July 21</p>
+				</a>
+				</div>
+				
+				<div class="image-container">
+			   <a href="https://example.com/movie1">
+				<img src="WEBSITE IMAGES\DUNE.jpg"alt="Image 2">
+				<h3>DUNE</h3>
+				<p>In theaters  July 21</p>
+				</a>
+				</div>
+				
+				<div class="image-container">
+			   <a href="https://example.com/movie1">
+				<img src="WEBSITE IMAGES\shazam2_keyart.jpg" alt="Image 2">
+				<h3>Shazam Fury Of Gods</h3>
+				<p>In theaters  July 21</p>
+				</a>
+			</div>
+				
+				
+			
+				<div id="solid-line-3"></div>
+				<div class="content-container">
+					   <header>
+						   <h1>NEW RELEASES TO OWN</h1>
+					  </header>
+						</div>
+				
+						<div class="image-container">
+						<a href="https://example.com/movie1">
+						 <img src="WEBSITE IMAGES\download (9).jpg" alt="Image 2">
+						 <h3>Surperpets</h3>
+						 <p>In theaters  July 21</p>
+						 </a>
+						 </div>
+						 
+						 <div class="image-container">
+						<a href="https://example.com/movie1">
+						 <img src="WEBSITE IMAGES\download (8).jpg" alt="Image 2">
+						 <h3>Kong Vs Godzilla</h3>
+						 <p>In theaters  July 21</p>
+						 </a>
+						 </div>
+						 
+						 <div class="image-container">
+						<a href="https://example.com/movie1">
+						 <img src="WEBSITE IMAGES\DUNE.jpg"alt="Image 2">
+						 <h3>DUNE</h3>
+						 <p>In theaters  July 21</p>
+						 </a>
+						 </div>
+						 
+						 <div class="image-container">
+						<a href="https://example.com/movie1">
+						 <img src="WEBSITE IMAGES\shazam2_keyart.jpg" alt="Image 2">
+						 <h3>Shazam Fury Of Gods</h3>
+						 <p>In theaters  July 21</p>
+						 </a>
+						</div>
+						 
+		
+				
+				
+			  
+	   
+		
+	</section>
+	
+	<footer>
+	 <div class="content-container">
+              <header>
+		          <h1>Follow Us</h1>
+	         </header>
+               </div>
+			   
+			    <div class="icon-container">
+				         <a href="https://twitter.com/Warnerbros/">
+						<img src="WEBSITE IMAGES\Twitter .png" alt="Image 1">
+						</a>
+						<a href="https://www.linkedin.com/company/warner-bros--entertainment/">
+						<img src="WEBSITE IMAGES\inkin.png" alt="Image 2">
+						</a>
+						<a href="https://www.youtube.com/user/WarnerBrosPictures">
+						<img src="WEBSITE IMAGES\youtube.png" alt="Image 3">
+						</a>
+						<a href="https://www.instagram.com/warnerbrosentertainment/">
+						<img src="WEBSITE IMAGES\inkin iamge.png" alt="Image 4">
+						</a>
+						<a href="https://web.facebook.com/warnerbrosent/?_rdc=1&_rdr">
+						<img src="WEBSITE IMAGES\facebook image.png" alt="Image 5">
+						</a>
+					  </div>
+		<p>&copy; 2023 My Website. All rights reserved.</p>
+	
+	   <footer>
+    <p>By using this site, you agree to the <a href="https://www.warnermediaprivacy.com/policycenter/b2c/en-row/" style="color: blue;">Privacy Policy</a> and <a href="https://www.warnermediaprivacy.com/terms-of-use/" style="color: bllue;">Terms of Use</a>.</p>
+       
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+	   </footer>
+
+	
+</body>
+</html>
